@@ -1,7 +1,9 @@
 @import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@300&display=swap");
 
-* {
-  box-sizing: border-box;
+/* create a root scope so we can use these variables anywhere */
+:root {
+  --success-color: #2ecc71;
+  --error-color: #e74c3c;
 }
 
 body {
@@ -49,4 +51,25 @@ h2 {
   width: 100%;
   padding: 10px;
   font-size: 14px;
+}
+
+/* highlight border of text input when selected */
+.form-control input:focus {
+  outline: 0;
+  border-color: #777;
+}
+
+/* if it has a class of success in js then this happens */
+.form-control.success input {
+  border-color: var(--success-color);
+}
+
+/* if it has a class of error in js then this happens */
+.form-control.error input {
+  border-color: var(--error-color);
+}
+
+/* where the error message is */
+.form-control small {
+  color: var(--error-color);
 }
