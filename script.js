@@ -29,7 +29,7 @@ function isValidEmail(email) {
 function checkRequired(inputArray) {
   inputArray.forEach(function(input) {
     if (input.value.trim() === "") {
-      showError(input, "is required");
+      showError(input, `${input.id} is required`);
     } else {
       showSuccess(input);
     }
