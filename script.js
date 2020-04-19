@@ -25,10 +25,14 @@ function isValidEmail(email) {
   return re.test(String(email).toLowerCase());
 }
 // check required fields
-
+// .trim removes any additional white space
 function checkRequired(inputArray) {
   inputArray.forEach(function(input) {
-    console.log(input);
+    if (input.value.trim() === "") {
+      showError(input, "is required");
+    } else {
+      showSuccess(input);
+    }
   });
 }
 
