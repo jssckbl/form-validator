@@ -38,7 +38,7 @@ function checkRequired(inputArray) {
 
 // Get field name
 function getFieldName(input) {
-  return input.id.charAt(0).toUpperCase();
+  return input.id.charAt(0).toUpperCase() + input.id.slice(1);
 }
 
 // need an event listener for the submit button on the form
